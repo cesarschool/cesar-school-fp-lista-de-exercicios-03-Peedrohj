@@ -27,8 +27,30 @@
 # Para a correta execução do programa, a estrutura atual deve ser mantida,
 # substituindo apenas o comando print(questão...) existente.
 ##
-def main():
-    print("questao 1")
+def main():senha = input('Me informe a senha: ')
+i = 0
+c = 0
+
+if 6 < len(senha) < 12:
+    for i in senha:
+        if i.isupper() == False:
+            c += 1
+
+        if i.islower() == False:
+            c += 1
+
+        if i.isnumeric() == False:
+            c += 1
+
+
+        if ('$' in i or '#' in i or '@' in i) == False:
+            c += 1
+
+
+if c > 4:
+    print("Senha válida", senha)
+else:
+    print("Senha inválida") print("questao 1")
     
 
 

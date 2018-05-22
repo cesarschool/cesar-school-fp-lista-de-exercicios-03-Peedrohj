@@ -38,7 +38,47 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 3")
+    altura = 0
+lado = 0 
+lista = []
+
+while True:
+        print("Me informe a posição: ")
+        valor = input(">>").upper()   
+	if valor != '':
+		for i in valor:
+                        if 'CIMA' in valor:
+				for x in valor:
+				    if x.isdigit():
+				        soma += int(x)
+						altura = altura + soma
+					break
+			if 'BAIXO' in valor:
+				for x in valor:
+				    if x.isdigit():
+				        soma += int(x)
+						altura = altura - soma
+					break
+
+			if 'ESQUERDA' in valor:
+				for x in valor:
+				    if x.isdigit():
+				        soma += int(x)
+						lado = lado - soma
+					break
+
+			if 'DIREITA' in valor:
+				for x in valor:
+				    if x.isdigit():
+				        soma += int(x)
+						lado = lado + soma
+					break
+	else:
+		break
+
+dist = ((lado ** 2) + (altura ** 2)) ** 1/2
+print(dist)
+
 
 
     

@@ -27,7 +27,18 @@
 # substituindo apenas o comando print(questão...) existente.
 ##
 def main():
-    print("questao 2")
+    frase= input('Digite qualquer coisa aqui: ').split()
+    lista = []
+    l = []
+
+    for i in frase:
+        lista.append("{}:{}".format(i,frase.count(i)))
+
+    for i in lista:
+            if i not in l:
+                l.append(i)
+
+    print(l)
 
 
 
